@@ -19,8 +19,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ToDoAPI.Models.ToDoContext>(
     options =>
     {
-        options.UseSqlServer(builder.Configuration.GetConnectionString("ResourcesDB"));
-        //The string above should match the connectionString name in appsettings.json
+        options.UseSqlServer(builder.Configuration.GetConnectionString("ToDoDB"));
     }
     );
 
